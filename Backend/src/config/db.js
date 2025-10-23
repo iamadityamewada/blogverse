@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
+
+DB_URL = process.env.MONGODB_URI;
 
 const dbConnect = () => {
   mongoose
-    .connect("mongodb://127.0.0.1:27017/blog")
+    .connect(DB_URL)
     .then(() => {
       console.log("DB CONNECTED");
     })
@@ -11,4 +14,4 @@ const dbConnect = () => {
     });
 }; 
 
-module.exports = { dbConnect };
+module.exports = { dbConnect }; 
