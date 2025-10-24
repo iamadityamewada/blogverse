@@ -1,1 +1,1 @@
-export const api_url = 'https://blogverse-bjsr.vercel.app/api'
+export const api_url = 'https://blogverse-bjsr.vercel.app'
