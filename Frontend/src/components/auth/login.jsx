@@ -3,6 +3,7 @@ import SocialLogin from "../utils/social";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Spinner } from "reactstrap";
+import { api_url } from "../../utils/constant";
 
 const Login = () => {
   // state
@@ -19,7 +20,7 @@ const Login = () => {
   const onLoginClick = () => {
     setIsLoading(true);
     axios
-      .post("http://localhost:4000/api/auth/login", values)
+      .post(`${api_url}/auth/login`, values)
       .then((res) => {
         setTimeout(() => {
           toast.success("Login Successfully");
